@@ -7,7 +7,7 @@ import azure.cognitiveservices.speech as speechsdk
 
 print("""Let us spell check your input.""")
 
-key = "19e46f9180454c3ead087b1aa1fbb499"
+key = "<enter api key>"
 
 demo_text = input("Please enter something: ")
 
@@ -52,7 +52,7 @@ text1 = """That is a hungry elephant."""
 print(text1)
 text1_lines = text1.splitlines()
 
-speech_config = speechsdk.SpeechConfig(subscription="38dcfaad146345b188c97dd6955404c8", region="southeastasia")
+speech_config = speechsdk.SpeechConfig(subscription="<enter api key>", region="southeastasia")
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)   
 print("Please speak into your microphone.")
 result = speech_recognizer.recognize_once_async().get()
